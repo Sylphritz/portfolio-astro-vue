@@ -6,6 +6,8 @@ import '@fontsource-variable/dm-sans'
 import '@/assets/styles/base.scss'
 
 import BodyWrapper from '@/components/LayoutComponents/BodyWrapper.astro'
+import Header from '@/components/LayoutComponents/Header.astro'
+import Footer from '@/components/LayoutComponents/Footer.astro'
 
 interface Props {
   title?: string
@@ -24,9 +26,9 @@ const { title = 'Pavee Udomkarnpaisarn' } = Astro.props
   </head>
   <body>
     <BodyWrapper>
-      <div>Header</div>
+      <Header />
       <slot />
-      <div>Footer</div>
+      <Footer />
     </BodyWrapper>
   </body>
 </html>
