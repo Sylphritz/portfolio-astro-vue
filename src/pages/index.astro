@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
+import LandingHeroSection from '@/components/Landing/LandingHeroSection.astro'
 ---
 
 <BaseLayout>
+  <LandingHeroSection />
   <h1
     class="inline-block bg-gradient-to-r from-red-600 to-green-400 bg-clip-text text-transparent"
   >
@@ -13,18 +15,4 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
   <h4>Heading 4</h4>
   <h5>Heading 5</h5>
   <h6>Heading 6</h6>
-  <small class="text-gray-700 block">small</small>
-  <p>
-    Paragraph Lorem ipsum <a href="#">dolor sit amet consectetur</a> adipisicing
-    elit. Ad, maiores quisquam recusandae aliquid soluta deleniti id autem aut
-    eligendi qui, magnam minima est incidunt officiis fugiat dignissimos ipsam
-    ratione quasi!
-  </p>
-  <ul>
-    <li>Item</li>
-    <li>Item</li>
-    <li>Item</li>
-    <li>Item</li>
-    <li>Item</li>
-  </ul>
 </BaseLayout>
