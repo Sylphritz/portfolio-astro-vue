@@ -6,7 +6,7 @@
   html {
     font-family: 'DM Sans Variable', sans-serif;
     font-size: 18px;
-    line-height: 1.7rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -47,6 +47,10 @@ h6 {
   @apply text-xl;
 }
 
+p {
+  @apply mb-4;
+}
+
 a {
-  @apply font-semibold text-green-400 hover:text-green-600;
+  @apply font-semibold text-rose-400 hover:text-rose-500;
 }

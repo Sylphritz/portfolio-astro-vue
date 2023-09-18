@@ -1,18 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import LandingHeroSection from '@/components/Landing/LandingHeroSection.astro'
+import ContentSection from '@/components/LayoutComponents/ContentSection.astro'
+import AboutMe from '@/components/Landing/Sections/AboutMe.astro'
 ---
 
 <BaseLayout>
   <LandingHeroSection />
-  <h1
-    class="inline-block bg-gradient-to-r from-red-600 to-green-400 bg-clip-text text-transparent"
-  >
-    Heading 1
-  </h1>
-  <h2 class="text-red-600">Heading 2</h2>
-  <h3 class="text-gray-500">Heading 3</h3>
-  <h4>Heading 4</h4>
-  <h5>Heading 5</h5>
-  <h6>Heading 6</h6>
+  <AboutMe />
+  <ContentSection title="My Works">My Works jkansdkjasndk</ContentSection>
+  <ContentSection title="Let's Get In Touch">Let's Connect</ContentSection>
 </BaseLayout>
