@@ -3,6 +3,7 @@ import ContentSection from '@/components/LayoutComponents/ContentSection.astro'
 import LinkedinIcon from '@/components/Common/Icons/LinkedinIcon.astro'
 import GithubIcon from '@/components/Common/Icons/GithubIcon.astro'
 import EmailIcon from '@/components/Common/Icons/EmailIcon.astro'
+import ExternalLinkIcon from '@/components/Common/Icons/ExternalLinkIcon.astro'
 import SocialMediaDisplay from '@/components/Landing/SocialMediaDisplay.astro'
 
 const title = 'Who Am I?'
@@ -10,7 +11,7 @@ const yearsOfExperience = new Date().getFullYear() - 2014 - 1
 ---
 
 <ContentSection {title}>
-  <div class="flex flex-row gap-6 flex-wrap">
+  <div class="flex flex-row gap-6 flex-wrap mb-10">
     <div class="basis-auto md:basis-1/2 flex-grow">
       <p>
         Hi, I'm <strong>Pavee Udomkarnpaisarn</strong> from Thailand. I'm a
@@ -26,10 +27,10 @@ const yearsOfExperience = new Date().getFullYear() - 2014 - 1
       </p>
     </div>
     <div
-      class="flex-shrink-0 flex-grow md:flex-grow-0 basis-auto md:basis-1/3 p-6 bg-slate-700/40"
+      class="flex-shrink-0 flex-grow md:flex-grow-0 basis-auto md:basis-1/3 p-6 bg-red-600/20"
     >
       <SocialMediaDisplay
-        text="Linkedin"
+        text="Pavee Udomkarnpaisarn"
         url="https://www.linkedin.com/in/pavee-udomkarnpaisarn-64957437/"
       >
         <LinkedinIcon slot="prefix" />
@@ -46,10 +47,10 @@ const yearsOfExperience = new Date().getFullYear() - 2014 - 1
     </div>
   </div>
 
-  <h4 class="mt-6">Skills & Experience</h4>
+  <h4>Skills & Experience</h4>
 
   <div
-    class="grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-3 md:gap-6"
+    class="grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-1 gap-3 md:gap-6 mb-10"
   >
     <div class="skills-grid-cell">
       <h4>Frontend</h4>
@@ -92,11 +93,39 @@ const yearsOfExperience = new Date().getFullYear() - 2014 - 1
       </ul>
     </div>
   </div>
+
+  <h4>Certifications</h4>
+
+  <div class="flex flex-column gap-6">
+    <div
+      class="cert-block w-full p-4 flex flex-row justify-between bg-gradient-to-b from-red-500/20 to-red-500/10 gap-6"
+    >
+      <div class="flex-grow">
+        <h5>Certified Vue.js Developer</h5>
+        <p class="mb-6">
+          One of the first group of people to become an officially certified
+          Vue.js developer through a series of proctored exams crafted by Vue.js
+          experts and signed by Evan You, the creator of Vue.js, himself.
+        </p>
+        <!-- TODO: Add the real certification URL -->
+        <a
+          class="inline-block py-2 uppercase tracking-widest"
+          href="#"
+          target="_blank"
+          >View certification <ExternalLinkIcon class="-mt-1" /></a
+        >
+      </div>
+      <div class="flex-none w-1/3">
+        <!-- TODO: Change the image to the actual certification -->
+        <img src="https://placehold.co/600x400" class="object-contain" />
+      </div>
+    </div>
+  </div>
 </ContentSection>
 
 <style lang="scss">
   .skills-grid-cell {
-    @apply p-3 bg-gradient-to-b from-slate-700/50 to-transparent;
+    @apply p-3 bg-gradient-to-b from-red-500/20 to-transparent;
 
     h4 {
       @apply uppercase text-lg font-normal opacity-70;
@@ -122,6 +151,12 @@ const yearsOfExperience = new Date().getFullYear() - 2014 - 1
           }
         }
       }
+    }
+  }
+
+  .cert-block {
+    h5 {
+      @apply font-normal uppercase tracking-widest;
     }
   }
 </style>
